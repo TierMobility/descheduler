@@ -97,11 +97,10 @@ workflows:
     #           - master
     - deploy-to-production:
         context: global-production
-          requires:
-    #       - deploy-to-stage
-            - build-and-push-image
+        requires:
+          - build-and-push-image
         filters:
-            branches:
-              only: "0.9.0"
+          branches:
+            only: "0.9.0"
 
 
