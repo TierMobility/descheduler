@@ -1,0 +1,11 @@
+
+releases:
+  - name: kube-descheduler
+    chart: kube-descheduler
+    namespace: cluster-service-kube-descheduler
+    wait: true
+    timeout: 120
+    values:
+      - image:
+          tag: '{{ env "IMAGE_TAG" | default "latest-master" }}'
+          repository: '{{ env "ECR_REPOSITORY_URL" }}'
