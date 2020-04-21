@@ -8,11 +8,14 @@ deschedulerPolicy:
       params:
         nodeResourceUtilizationThresholds:
           thresholds:
-            cpu: 35
+            cpu: 50
             memory: 40
             pods: 0
           targetThresholds:
-            cpu: 60
+            cpu: 75
             memory: 70
             pods: 50
         numberOfNodes: 5    
+
+cmdOptions:
+  dry-run: ""
