@@ -21,8 +21,8 @@ import (
 	"flag"
 	"io"
 
-	"github.com/kubernetes-incubator/descheduler/cmd/descheduler/app/options"
-	"github.com/kubernetes-incubator/descheduler/pkg/descheduler"
+	"github.com/tiermobility/descheduler/cmd/descheduler/app/options"
+	"github.com/tiermobility/descheduler/pkg/descheduler"
 
 	"github.com/golang/glog"
 	"github.com/spf13/cobra"

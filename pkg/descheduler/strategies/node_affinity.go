@@ -18,11 +18,11 @@ package strategies
 
 import (
 	"github.com/golang/glog"
-	"github.com/kubernetes-incubator/descheduler/cmd/descheduler/app/options"
-	"github.com/kubernetes-incubator/descheduler/pkg/api"
-	"github.com/kubernetes-incubator/descheduler/pkg/descheduler/evictions"
-	nodeutil "github.com/kubernetes-incubator/descheduler/pkg/descheduler/node"
-	podutil "github.com/kubernetes-incubator/descheduler/pkg/descheduler/pod"
+	"github.com/tiermobility/descheduler/cmd/descheduler/app/options"
+	"github.com/tiermobility/descheduler/pkg/api"
+	"github.com/tiermobility/descheduler/pkg/descheduler/evictions"
+	nodeutil "github.com/tiermobility/descheduler/pkg/descheduler/node"
+	podutil "github.com/tiermobility/descheduler/pkg/descheduler/pod"
 	"k8s.io/api/core/v1"
 )
 

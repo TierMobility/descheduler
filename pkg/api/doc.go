@@ -16,4 +16,4 @@ limitations under the License.
 
 // +k8s:deepcopy-gen=package,register
 
-package api // import "github.com/kubernetes-incubator/descheduler/pkg/api"
+package api // import "github.com/tiermobility/descheduler/pkg/api"

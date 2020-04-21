@@ -21,8 +21,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/kubernetes-incubator/descheduler/pkg/api"
-	"github.com/kubernetes-incubator/descheduler/test"
+	"github.com/tiermobility/descheduler/pkg/api"
+	"github.com/tiermobility/descheduler/test"
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	"k8s.io/apimachinery/pkg/runtime"

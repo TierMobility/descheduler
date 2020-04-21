@@ -17,10 +17,10 @@ limitations under the License.
 package strategies
 
 import (
-	"github.com/kubernetes-incubator/descheduler/cmd/descheduler/app/options"
-	"github.com/kubernetes-incubator/descheduler/pkg/api"
-	"github.com/kubernetes-incubator/descheduler/pkg/descheduler/evictions"
-	podutil "github.com/kubernetes-incubator/descheduler/pkg/descheduler/pod"
+	"github.com/tiermobility/descheduler/cmd/descheduler/app/options"
+	"github.com/tiermobility/descheduler/pkg/api"
+	"github.com/tiermobility/descheduler/pkg/descheduler/evictions"
+	podutil "github.com/tiermobility/descheduler/pkg/descheduler/pod"
 
 	"github.com/golang/glog"
 

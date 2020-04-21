@@ -23,10 +23,10 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 
 	"github.com/golang/glog"
-	"github.com/kubernetes-incubator/descheduler/pkg/api"
-	_ "github.com/kubernetes-incubator/descheduler/pkg/api/install"
-	"github.com/kubernetes-incubator/descheduler/pkg/api/v1alpha1"
-	"github.com/kubernetes-incubator/descheduler/pkg/descheduler/scheme"
+	"github.com/tiermobility/descheduler/pkg/api"
+	_ "github.com/tiermobility/descheduler/pkg/api/install"
+	"github.com/tiermobility/descheduler/pkg/api/v1alpha1"
+	"github.com/tiermobility/descheduler/pkg/descheduler/scheme"
 )
 
 func LoadPolicyConfig(policyConfigFile string) (*api.DeschedulerPolicy, error) {

@@ -19,9 +19,9 @@ package strategies
 import (
 	"testing"
 
-	"github.com/kubernetes-incubator/descheduler/cmd/descheduler/app/options"
-	"github.com/kubernetes-incubator/descheduler/pkg/api"
-	"github.com/kubernetes-incubator/descheduler/test"
+	"github.com/tiermobility/descheduler/cmd/descheduler/app/options"
+	"github.com/tiermobility/descheduler/pkg/api"
+	"github.com/tiermobility/descheduler/test"
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/client-go/kubernetes/fake"

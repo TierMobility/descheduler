@@ -13,14 +13,15 @@
 # limitations under the License.
 FROM golang:1.9.2
 
-WORKDIR /go/src/github.com/kubernetes-incubator/descheduler
+WORKDIR /go/src/github.com/tiermobility/descheduler
 COPY . .
 RUN make
+RUN make test-unit
 
 FROM scratch
 
 MAINTAINER Avesh Agarwal <avagarwa@redhat.com>
 
-COPY --from=0 /go/src/github.com/kubernetes-incubator/descheduler/_output/bin/descheduler /bin/descheduler
+COPY --from=0 /go/src/github.com/tiermobility/descheduler/_output/bin/descheduler /bin/descheduler
 
 CMD ["/bin/descheduler", "--help"]
