@@ -11,7 +11,7 @@ schedule: "*/30 * * * *"
 
 cmdOptions:
   v: 4
-  max-pods-to-evict-per-node: 10
+  max-pods-to-evict-per-node: 5
   node-selector: role!=rabbitmq,role!=prometheus,role!=cluster-management
 
  # deschedulerPolicy:

@@ -15,7 +15,7 @@ spec:
         app: {{ template "descheduler.name" . }}
         release: {{ .Release.Name }}
       annotations:
-        scheduler.alpha.kubernetes.io/critical-pod: "true"
+        scheduler.alpha.kubernetes.io/critical-pod: ""
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
     spec:
       template:
