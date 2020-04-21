@@ -29,8 +29,7 @@ spec:
             - mountPath: /policy-dir
               name: policy-volume
             command:
-            - /bin/descheduler
-            - --dry-run
+            - /bin/descheduler            
             - --policy-config-file=/policy-dir/deschedulerpolicy.yaml
             {{- range $key, $value := .Values.cmdOptions }}
             - --{{ $key }}{{ if $value }}={{ $value }}{{ end }}
