@@ -15,6 +15,7 @@ FROM golang:1.9.2
 
 WORKDIR /go/src/github.com/tiermobility/descheduler
 COPY . .
+
 RUN make
 RUN make test-unit
 
