@@ -17,5 +17,5 @@ deschedulerPolicy:
             pods: 50
         numberOfNodes: 5    
 
-# cmdOptions:
-#   dry-run: ""
+cmdOptions:
+  dry-run: ""

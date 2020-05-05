@@ -26,6 +26,10 @@ import (
 	"k8s.io/kubernetes/pkg/kubelet/types"
 )
 
+const (
+	CriticalPodAnnotationKey     = "scheduler.alpha.kubernetes.io/critical-pod"
+)
+
 // checkLatencySensitiveResourcesForAContainer checks if there are any latency sensitive resources like GPUs.
 func checkLatencySensitiveResourcesForAContainer(rl v1.ResourceList) bool {
 	if rl == nil {
@@ -97,7 +101,11 @@ func ListPodsOnANode(client clientset.Interface, node *v1.Node) ([]*v1.Pod, erro
 }
 
 func IsCriticalPod(pod *v1.Pod) bool {
-	return types.IsCriticalPod(pod)
+	val, ok := pod.Annotations[CriticalPodAnnotationKey]
+	if ok && val == "" {
+		return true
+	}
+	return false
 }
 
 func IsBestEffortPod(pod *v1.Pod) bool {

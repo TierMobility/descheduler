@@ -4,7 +4,16 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.7.0
 
 jobs:
-  
+
+  test:
+    docker:
+      - image: circleci/golang:1.9.2
+    steps:
+      - checkout
+      - run:
+          name: Test
+          command: make test-unit
+
   build-and-push-image:
     description: "Build and push image to ECR. Tagged as latest-<branch_name> and with <git_commit_hash>"
 
@@ -85,6 +94,7 @@ workflows:
   version: 2
   deploy:
     jobs:    
+    - test
     - build-and-push-image:
         context: global-production    
     # - deploy-to-stage:
