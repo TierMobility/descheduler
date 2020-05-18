@@ -19,6 +19,9 @@ spec:
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
     spec:
       template:
+        metadata:
+          annotations:
+            scheduler.alpha.kubernetes.io/critical-pod: ""
         spec:
           serviceAccountName: {{ template "descheduler.serviceAccountName" . }}
           containers:
